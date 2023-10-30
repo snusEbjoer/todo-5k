@@ -18,7 +18,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({ todo, deleteToDo, changeDone
 		setIsShown(prev => !prev)
 	}
 	return (
-		<div className="flex justify-end items-center max-w-sm gap-3 w-full min-w-xs text-md p-3.5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" onMouseEnter={toggleIsShown} onMouseLeave={toggleIsShown}>
+		<div key={todo.id} className="flex justify-end items-center max-w-sm gap-3 w-full min-w-xs text-md p-3.5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" onMouseEnter={toggleIsShown} onMouseLeave={toggleIsShown}>
 			<div className="flex justify-between w-full items-center">
 			<p className={todo.done === true ? 'text-black opacity-50 line-through' : ''}>{todo.name}</p>
 			{isShown && (
