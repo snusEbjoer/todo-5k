@@ -4,7 +4,7 @@ import { TodoList } from './components/TodoList'
 import { TodoHeader } from './components/TodoHeader'
 
 function App() {
-  const [todos, setTodos] = useState<ToDo[]>(JSON.parse(localStorage.getItem('todos') || ''))
+  const [todos, setTodos] = useState<ToDo[]>(JSON.parse(localStorage.getItem('todos') || '[]'))
   const [select, setSelect] = useState<boolean>(false)
 
   const incrementId = (prev: ToDo[]) => {
