@@ -52,7 +52,7 @@ function App() {
   }
 
   const changeDone = (id: number) => {
-    setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, done: !todo.done } : todo))
+    setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, done: !todo.done } : todo).sort((a,b) => a.done > b.done ? 1 : -1))
   }
 
   const deleteToDo = (id: number) => {
