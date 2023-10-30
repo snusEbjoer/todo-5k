@@ -69,6 +69,7 @@ function App() {
 
   const doneSelected = () => {
     setTodos(prev => prev.map(todo => todo.selected === true ? { ...todo, done: !todo.done} : todo).sort((a,b) => a.done > b.done ? 1 : -1))
+    setSelect(false)
   }
   
   useEffect(() => {
